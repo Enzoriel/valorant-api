@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.caja {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, transparent, #383838, transparent);
+}
+
+.caja label {
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+.busqueda {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.busqueda input {
+  padding-left: 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 70%;
+  border: none;
+  outline: none;
+}
+
+.busqueda input:focus {
+  background-color: rgb(31, 31, 31);
+}
+
+.busqueda svg {
+  border-radius: 10px 0 0 10px;
+  background-color: red;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.busqueda svg:hover {
+  background-color: rgb(126, 0, 0);
+}
+.busqueda svg:active {
+  scale: 0.97;
+}
