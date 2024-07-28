@@ -20,6 +20,7 @@ const Contexto = createContext();
 const ContextoProvider = ({ children }) => {
   const [agentName, setAgentName] = useState(null);
   const [agente, setAgente] = useState(null);
+  const [dbAgente, setDbAgente] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,15 +29,19 @@ const ContextoProvider = ({ children }) => {
     if (nombresAgentes.includes(agentName)) {
       conexionAPI().then((datos) => {
         const agenteDatos = datos.filter((agente) => agente.displayName.toLowerCase() === agentName);
+        const dbAgenteDatos = db.filter((agente) => agente.agentName.toLowerCase() === agentName);
         setAgente(agenteDatos[0]);
+        setDbAgente(dbAgenteDatos[0]);
         navigate(`/agentes`);
       });
-    }
+    } else navigate("/");
   }, [agentName]);
 
   const contextValue = {
     agentName,
     setAgentName,
+    agente,
+    dbAgente,
   };
 
   return <Contexto.Provider value={contextValue}>{children}</Contexto.Provider>;

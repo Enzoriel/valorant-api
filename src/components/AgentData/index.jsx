@@ -1,62 +1,63 @@
+import { useContext } from "react";
 import styles from "./AgentData.module.css";
+import { Contexto } from "../../Context";
 
 function AgentData() {
+  const { agente, dbAgente } = useContext(Contexto);
+
+  if (!agente) {
+    return null;
+  }
+
   return (
     <>
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <button aria-label="Ver descripción">Descripción</button>
+          </li>
+          <li>
+            <button aria-label="Ver descripción">Habilidades</button>
+          </li>
+        </ul>
+      </nav>
       <div className={styles.container}>
         <section className={styles.personaje}>
-          <header>Nombre</header>
-          <img
-            className={styles.background}
-            src="https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/background.png"
-            alt="Imagen de fondo"
-          />
-          <img
-            className={styles.agenteImagen}
-            src="https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/fullportrait.png"
-            alt="Imagen de Fade"
-          />
+          <header>{agente.displayName}</header>
+          <img className={styles.background} src={agente.background} alt="Imagen de fondo" />
+          <img className={styles.agenteImagen} src={agente.fullPortrait} alt={`Imagen de ${agente}`} />
         </section>
         <section className={styles.descripcionContainer}>
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <button aria-label="Ver descripción">Descripción</button>
-              </li>
-              <li>
-                <button aria-label="Ver descripción">Habilidades</button>
-              </li>
-            </ul>
-          </nav>
           <div className={styles.descripcion}>
             <table className={styles.datosPersonaje}>
               <tbody>
                 <tr>
                   <th>Nombre real</th>
-                  <td>Fade</td>
+                  <td>{dbAgente.realName}</td>
+                </tr>
+                <tr>
+                  <th>Developer Name</th>
+                  <td>{agente.developerName}</td>
                 </tr>
                 <tr>
                   <th>Descripción</th>
-                  <td>
-                    Cazarrecompensas turca que utiliza el poder de las pesadillas para atrapar a sus
-                    objetivos.
-                  </td>
+                  <td>{agente.description}</td>
                 </tr>
                 <tr>
                   <th>Origen</th>
-                  <td>Canada</td>
+                  <td>{dbAgente.origin}</td>
                 </tr>
                 <tr>
                   <th>Cumpleaños</th>
-                  <td>Ayer</td>
+                  <td>{dbAgente.birthday}</td>
                 </tr>
                 <tr>
                   <th>Rol</th>
-                  <td>Iniciador</td>
+                  <td>{agente.role.displayName}</td>
                 </tr>
                 <tr>
                   <th>Historia</th>
-                  <td>Comía pan</td>
+                  <td>{dbAgente.funFact}</td>
                 </tr>
               </tbody>
             </table>
