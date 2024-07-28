@@ -6,14 +6,13 @@
   height: 140px;
   background: linear-gradient(to right, transparent, #383838, transparent);
 }
+
 .logo {
   position: absolute;
   left: 40px;
+  top: 20px;
   width: 150px;
   height: 100px;
   object-fit: cover;
-  cursor: pointer;
-}
-.contenedor h1 {
   cursor: pointer;
 }

@@ -1,13 +1,14 @@
 import { useContext, useRef } from "react";
 import styles from "./Home.module.css";
 import { Contexto } from "../../Context";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const { setAgentName } = useContext(Contexto);
   const inputRef = useRef();
 
-  const cambiarAgente = (nombre) => {
-    setAgentName(nombre);
+  const cambiarAgente = (agente) => {
+    setAgentName(agente);
   };
 
   return (

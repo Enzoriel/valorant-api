@@ -40,6 +40,9 @@
 }
 
 .busqueda svg {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   border-radius: 10px 0 0 10px;
   background-color: red;
   padding: 5px;

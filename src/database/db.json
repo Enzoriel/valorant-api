@@ -1,0 +1,178 @@
+[
+  {
+    "agentName": "Brimstone",
+    "realName": "Liam Byrne",
+    "origin": "Estados Unidos",
+    "birthday": "01-01-1960",
+    "role": "Controlador",
+    "funFact": "Era comandante militar antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Viper",
+    "realName": "Sabine Callas",
+    "origin": "Estados Unidos",
+    "birthday": "06-18-1978",
+    "role": "Controlador",
+    "funFact": "Trabajaba como científica antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Omen",
+    "realName": "Desconocido",
+    "origin": "Desconocido",
+    "birthday": "Desconocido",
+    "role": "Controlador",
+    "funFact": "Fue víctima de un experimento que salió mal, dejándolo como una sombra."
+  },
+  {
+    "agentName": "Killjoy",
+    "realName": "Kira Meier",
+    "origin": "Alemania",
+    "birthday": "11-13-1997",
+    "role": "Centinela",
+    "funFact": "Era una inventora prodigio que trabajaba en tecnología avanzada."
+  },
+  {
+    "agentName": "Cypher",
+    "realName": "Amir El Amari",
+    "origin": "Marruecos",
+    "birthday": "02-14-1983",
+    "role": "Centinela",
+    "funFact": "Trabajaba como espía y recolector de información antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Sova",
+    "realName": "Alexander",
+    "origin": "Rusia",
+    "birthday": "04-07-1985",
+    "role": "Iniciador",
+    "funFact": "Era un rastreador y cazador experto en su tierra natal."
+  },
+  {
+    "agentName": "Sage",
+    "realName": "Ling Ying Wei",
+    "origin": "China",
+    "birthday": "03-27-1992",
+    "role": "Centinela",
+    "funFact": "Era una curandera respetada en su comunidad antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Phoenix",
+    "realName": "Jamie Adeyemi",
+    "origin": "Reino Unido",
+    "birthday": "04-23-1997",
+    "role": "Duelista",
+    "funFact": "Era un joven prodigio en la escena de combate urbano en Londres."
+  },
+  {
+    "agentName": "Jett",
+    "realName": "Sunwoo Han",
+    "origin": "Corea del Sur",
+    "birthday": "09-22-1998",
+    "role": "Duelista",
+    "funFact": "Trabajaba como chef antes de descubrir sus habilidades sobrehumanas."
+  },
+  {
+    "agentName": "Reyna",
+    "realName": "Zyanya Mondragón",
+    "origin": "México",
+    "birthday": "06-10-1991",
+    "role": "Duelista",
+    "funFact": "Fue una luchadora implacable en su ciudad natal."
+  },
+  {
+    "agentName": "Raze",
+    "realName": "Tayane Alves",
+    "origin": "Brasil",
+    "birthday": "12-12-1995",
+    "role": "Duelista",
+    "funFact": "Era una experta en demolición y explosivos en su ciudad natal."
+  },
+  {
+    "agentName": "Breach",
+    "realName": "Erik Torsten",
+    "origin": "Suecia",
+    "birthday": "05-01-1982",
+    "role": "Iniciador",
+    "funFact": "Lideraba una banda de mercenarios antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Skye",
+    "realName": "Kirra Foster",
+    "origin": "Australia",
+    "birthday": "11-01-1994",
+    "role": "Iniciador",
+    "funFact": "Protegía la vida silvestre en Australia antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Yoru",
+    "realName": "Ryo Kiritani",
+    "origin": "Japón",
+    "birthday": "08-12-1988",
+    "role": "Duelista",
+    "funFact": "Era un cazador de tesoros en busca de artefactos antiguos."
+  },
+  {
+    "agentName": "Astra",
+    "realName": "Efia Danso",
+    "origin": "Ghana",
+    "birthday": "07-15-1986",
+    "role": "Controlador",
+    "funFact": "Era una astrónoma que estudiaba las estrellas."
+  },
+  {
+    "agentName": "KAY/O",
+    "realName": "KAY/O",
+    "origin": "Desconocido",
+    "birthday": "Desconocido",
+    "role": "Iniciador",
+    "funFact": "Fue creado para neutralizar a los Radiantes."
+  },
+  {
+    "agentName": "Chamber",
+    "realName": "Vincent Fabron",
+    "origin": "Francia",
+    "birthday": "03-03-1984",
+    "role": "Centinela",
+    "funFact": "Trabajaba como ingeniero de armas y asesino a sueldo."
+  },
+  {
+    "agentName": "Neon",
+    "realName": "Tala Nicole Dimaapi Valdez",
+    "origin": "Filipinas",
+    "birthday": "04-18-2000",
+    "role": "Duelista",
+    "funFact": "Trabajaba en un laboratorio de bioelectricidad."
+  },
+  {
+    "agentName": "Fade",
+    "realName": "Hazal Eyletmez",
+    "origin": "Turquía",
+    "birthday": "02-22-1993",
+    "role": "Iniciador",
+    "funFact": "Era una detective especializada en psicología criminal."
+  },
+  {
+    "agentName": "Harbor",
+    "realName": "Varun Batra",
+    "origin": "India",
+    "birthday": "11-11-1987",
+    "role": "Controlador",
+    "funFact": "Era un arqueólogo especializado en artefactos místicos."
+  },
+  {
+    "agentName": "Gekko",
+    "realName": "Mateo García",
+    "origin": "Estados Unidos (Los Ángeles)",
+    "birthday": "09-09-2001",
+    "role": "Iniciador",
+    "funFact": "Trabajaba en un santuario de criaturas espirituales."
+  },
+  {
+    "agentName": "Clove",
+    "realName": "Desconocido",
+    "origin": "Desconocido",
+    "birthday": "Desconocido",
+    "role": "Desconocido",
+    "funFact": "Información no disponible."
+  }
+]
