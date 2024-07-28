@@ -28,7 +28,9 @@ const ContextoProvider = ({ children }) => {
 
     if (nombresAgentes.includes(agentName)) {
       conexionAPI().then((datos) => {
-        const agenteDatos = datos.filter((agente) => agente.displayName.toLowerCase() === agentName);
+        const agenteDatos = datos.filter(
+          (agente) => agente.isPlayableCharacter && agente.displayName.toLowerCase() === agentName
+        );
         const dbAgenteDatos = db.filter((agente) => agente.agentName.toLowerCase() === agentName);
         setAgente(agenteDatos[0]);
         setDbAgente(dbAgenteDatos[0]);

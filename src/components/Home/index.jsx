@@ -11,6 +11,13 @@ function Home() {
     setAgentName(agente);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      cambiarAgente(inputRef.current.value.toLowerCase());
+    }
+  };
+
   return (
     <div className={styles.container}>
       <section className={styles.caja}>
@@ -24,7 +31,7 @@ function Home() {
               />
             </svg>
           </div>
-          <input ref={inputRef} id="id" placeholder="Ej: Gekko" type="text" />
+          <input ref={inputRef} id="id" placeholder="Ej: Gekko" type="text" onKeyDown={handleKeyDown} />
         </div>
       </section>
     </div>
