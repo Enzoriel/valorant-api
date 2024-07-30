@@ -1,7 +1,7 @@
 .container {
   display: flex;
+  justify-content: space-between;
   padding: 2%;
-  align-items: center;
 }
 
 .personaje {
@@ -57,26 +57,4 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.datosPersonaje {
-  border-collapse: separate;
-}
-
-.datosPersonaje td {
-  padding: 20px;
-  text-align: left;
-  border: 1px solid #727272;
-}
-
-.datosPersonaje th {
-  font-size: 16px;
-  padding: 20px;
-  box-shadow: inset 0 0 30px black;
-  text-align: left;
-  font-weight: bold;
-  border: 1px solid #727272;
-  white-space: nowrap;
 }

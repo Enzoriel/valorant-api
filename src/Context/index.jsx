@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import db from "../database/db.json";
 
-const url = "https://valorant-api.com/v1/agents?language=es-ES";
+const url = "https://valorant-api.com/v1/agents?language=es-MX";
 
 const conexionAPI = async () => {
   try {

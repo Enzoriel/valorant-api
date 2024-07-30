@@ -21,7 +21,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <section className={styles.caja}>
-        <label htmlFor="id">Ingresa el nombre del agente</label>
+        <label htmlFor="id">O ingresa el nombre del agente</label>
         <div className={styles.busqueda}>
           <div onClick={() => cambiarAgente(inputRef.current.value.toLowerCase())}>
             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
