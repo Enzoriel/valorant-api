@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styles from "./AgentData.module.css";
 import { Contexto } from "../../Context";
-import AgentDescription from "./AgentDescription";
 import AgentAbilities from "./AgentAbilities";
+import AgentDescription from "./AgentDescription";
 
 function AgentData() {
   const { agente } = useContext(Contexto);
+  const [buttonActive, setButtonActive] = useState("Descripción");
 
   if (!agente) {
     return null;
@@ -13,16 +14,6 @@ function AgentData() {
 
   return (
     <>
-      <nav className={styles.nav}>
-        <ul>
-          <li>
-            <button aria-label="Ver descripción">Descripción</button>
-          </li>
-          <li>
-            <button aria-label="Ver descripción">Habilidades</button>
-          </li>
-        </ul>
-      </nav>
       <div className={styles.container}>
         <section className={styles.personaje}>
           <header>{agente.displayName}</header>
@@ -30,7 +21,29 @@ function AgentData() {
           <img className={styles.agenteImagen} src={agente.fullPortrait} alt={`Imagen de ${agente}`} />
         </section>
         <section className={styles.descripcionContainer}>
-          <AgentAbilities />
+          <nav className={styles.nav}>
+            <ul>
+              <li>
+                <button
+                  aria-label="Ver descripción"
+                  onClick={() => setButtonActive("Descripción")}
+                  className={buttonActive === "Descripción" ? styles.active : ""}
+                >
+                  Descripción
+                </button>
+              </li>
+              <li>
+                <button
+                  aria-label="Ver descripción"
+                  onClick={() => setButtonActive("Habilidades")}
+                  className={buttonActive === "Habilidades" ? styles.active : ""}
+                >
+                  Habilidades
+                </button>
+              </li>
+            </ul>
+          </nav>
+          {buttonActive === "Habilidades" ? <AgentAbilities /> : <AgentDescription />}
         </section>
       </div>
     </>

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import styles from "./AgentAbilities.module.css";
 import { Contexto } from "../../../Context";
+import AgentAbilitiesData from "../AgentAbilitiesData";
 
 function AgentAbilities() {
   const {
@@ -14,11 +15,22 @@ function AgentAbilities() {
 
   const { Ability1, Ability2, Grenade, Ultimate } = abilitiesBySlot;
   const [selectAbility, setSelectAbility] = useState(Ability1);
+  const [activeAbility, setActiveAbility] = useState("Ability1");
 
   const crearHabilidades = (habilidad) => {
     return (
-      <li key={habilidad.slot} onClick={() => setSelectAbility(habilidad)}>
-        <img className={styles.iconos} src={habilidad.displayIcon} alt={habilidad.displayName} />
+      <li
+        key={habilidad.slot}
+        onClick={() => {
+          setSelectAbility(habilidad);
+          setActiveAbility(habilidad.slot);
+        }}
+      >
+        <img
+          src={habilidad.displayIcon}
+          alt={habilidad.displayName}
+          className={`${habilidad.slot === activeAbility ? styles.active : ""} ${styles.iconos}`}
+        />
       </li>
     );
   };
@@ -39,14 +51,19 @@ function AgentAbilities() {
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.imagenHabilidades}>
-        <ul className={styles.lista}>
-          {[Ability1, Ability2, Grenade, Ultimate].map((habilidad) => crearHabilidades(habilidad))}
-        </ul>
-      </div>
-      {nombreDescripcion()}
-    </section>
+    <>
+      <section className={styles.container}>
+        <div className={styles.caja}>
+          <div className={styles.imagenHabilidades}>
+            <ul className={styles.lista}>
+              {[Ability1, Ability2, Grenade, Ultimate].map((habilidad) => crearHabilidades(habilidad))}
+            </ul>
+          </div>
+          {nombreDescripcion()}
+        </div>
+        <AgentAbilitiesData />
+      </section>
+    </>
   );
 }
 

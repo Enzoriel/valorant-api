@@ -25,7 +25,7 @@ function AgentDescription() {
           <td>{dbAgente.origin}</td>
         </tr>
         <tr>
-          <th>Cumpleaños</th>
+          <th>Nacimiento</th>
           <td>{dbAgente.birthday}</td>
         </tr>
         <tr>

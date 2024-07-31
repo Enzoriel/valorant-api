@@ -6,12 +6,13 @@
 
 .personaje {
   position: relative;
-  width: 300px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   border: 2px solid #727272;
   box-shadow: inset 0 0 100px rgb(0, 0, 0);
   overflow: hidden;
+  height: 100%;
 }
 
 .personaje header {
@@ -34,7 +35,7 @@
 
 .agenteImagen {
   width: 100%;
-  height: 480px;
+  height: 550px;
   object-fit: cover;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   z-index: 1;
@@ -43,6 +44,7 @@
 .nav {
   display: flex;
   justify-content: center;
+  margin-bottom: 25px;
 }
 
 .nav ul {
@@ -51,6 +53,28 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.nav button {
+  background-color: transparent;
+  border: 1px solid #727272;
+  box-shadow: inset 0 0 20px black;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #727272;
+}
+
+.nav button:hover {
+  outline: 1px solid #727272;
+  outline-offset: 2px;
+}
+
+.nav .active {
+  background-color: #72727230;
+  scale: 1.05;
 }
 
 .descripcionContainer {

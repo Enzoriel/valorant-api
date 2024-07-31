@@ -1,0 +1,7 @@
+.tabla {
+  display: flex;
+}
+
+.tabla tbody {
+  text-align: start;
+}
