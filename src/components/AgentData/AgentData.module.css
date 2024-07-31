@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 2%;
+  margin-top: 30px;
 }
 
 .personaje {
@@ -43,8 +44,9 @@
 
 .nav {
   display: flex;
+  width: 80%;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .nav ul {
@@ -73,12 +75,13 @@
 }
 
 .nav .active {
-  background-color: #72727230;
+  background-color: #d3d3d330;
+  border-color: #ffffff91;
   scale: 1.05;
 }
 
 .descripcionContainer {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10px;
 }
