@@ -60,8 +60,8 @@ function AgentAbilities() {
             </ul>
           </div>
           {nombreDescripcion()}
+          <AgentAbilitiesData />
         </div>
-        <AgentAbilitiesData />
       </section>
     </>
   );

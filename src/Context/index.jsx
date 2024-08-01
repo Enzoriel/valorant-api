@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import db from "../database/db.json";
+import dbAbilities from "../database/dbAbilities.json";
 
 const url = "https://valorant-api.com/v1/agents?language=es-MX";
 
@@ -44,6 +45,7 @@ const ContextoProvider = ({ children }) => {
     setAgentName,
     agente,
     dbAgente,
+    dbAbilities,
   };
 
   return <Contexto.Provider value={contextValue}>{children}</Contexto.Provider>;
