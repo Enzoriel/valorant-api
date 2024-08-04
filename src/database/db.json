@@ -174,5 +174,21 @@
     "birthday": "Desconocido",
     "role": "Desconocido",
     "funFact": "Información no disponible."
+  },
+  {
+    "agentName": "Deadlock",
+    "realName": "Iselin",
+    "origin": "Noruega",
+    "birthday": "12-02-1991",
+    "role": "Centinela",
+    "funFact": "Era una ingeniera en robótica antes de unirse a Valorant."
+  },
+  {
+    "agentName": "Iso",
+    "realName": "Ismail Ekene",
+    "origin": "Nigeria",
+    "birthday": "04-03-1995",
+    "role": "Iniciador",
+    "funFact": "Era un luchador de artes marciales mixtas antes de unirse a Valorant."
   }
 ]

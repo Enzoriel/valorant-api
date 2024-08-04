@@ -3,20 +3,26 @@ import styles from "./AgentSelection.module.css";
 import { Contexto } from "../../Context";
 
 function AgentSelection() {
-  const { agentes } = useContext(Contexto);
+  const { agentes, setAgentName } = useContext(Contexto);
+
+  const changeAgent = (agente) => {
+    setAgentName(agente);
+  };
 
   const displayAgentes = () => {
     return (
       <div className={styles.container}>
         {agentes &&
           agentes.map((agente, index) => (
-            <div className={styles.caja}>
+            <div key={index} className={styles.caja}>
               <div className={styles.sombreado}></div>
               <img
-                key={index}
                 src={agente.icono}
                 alt={`Icono de ${agente.nombre}`}
                 className={styles.agenteIcono}
+                onClick={() => {
+                  changeAgent(agente.nombre.toLowerCase());
+                }}
               />
             </div>
           ))}
