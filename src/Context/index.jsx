@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import db from "../database/db.json";
-import dbAbilities from "../database/dbAbilities.json";
 
 const url = "https://valorant-api.com/v1/agents?language=es-MX";
 
@@ -20,9 +19,22 @@ const Contexto = createContext();
 
 const ContextoProvider = ({ children }) => {
   const [agentName, setAgentName] = useState(null);
+  const [agentes, setAgentes] = useState(null);
   const [agente, setAgente] = useState(null);
   const [dbAgente, setDbAgente] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    conexionAPI().then((data) => {
+      const filtroSova = data.filter((sova) => sova.isPlayableCharacter != false);
+      const allAgents = filtroSova.map((datos) => ({
+        nombre: datos.displayName,
+        icono: datos.displayIconSmall,
+        rol: datos.role.displayName,
+      }));
+      setAgentes(allAgents);
+    });
+  }, []);
 
   useEffect(() => {
     const nombresAgentes = db.map((nombre) => nombre.agentName.toLowerCase());
@@ -45,7 +57,7 @@ const ContextoProvider = ({ children }) => {
     setAgentName,
     agente,
     dbAgente,
-    dbAbilities,
+    agentes,
   };
 
   return <Contexto.Provider value={contextValue}>{children}</Contexto.Provider>;

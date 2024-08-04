@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import styles from "./AgentAbilities.module.css";
 import { Contexto } from "../../../Context";
-import AgentAbilitiesData from "../AgentAbilitiesData";
 
 function AgentAbilities() {
   const {
@@ -14,6 +13,7 @@ function AgentAbilities() {
   }, {});
 
   const { Ability1, Ability2, Grenade, Ultimate } = abilitiesBySlot;
+
   const [selectAbility, setSelectAbility] = useState(Ability1);
   const [activeAbility, setActiveAbility] = useState("Ability1");
 
@@ -60,7 +60,6 @@ function AgentAbilities() {
             </ul>
           </div>
           {nombreDescripcion()}
-          <AgentAbilitiesData />
         </div>
       </section>
     </>

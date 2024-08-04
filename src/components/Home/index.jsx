@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import styles from "./Home.module.css";
 import { Contexto } from "../../Context";
-import { useNavigate } from "react-router-dom";
+import AgentSelection from "../AgentSelection";
 
 function Home() {
   const { setAgentName } = useContext(Contexto);
@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <div className={styles.container}>
+      <AgentSelection />
       <section className={styles.caja}>
         <label htmlFor="id">O ingresa el nombre del agente</label>
         <div className={styles.busqueda}>
