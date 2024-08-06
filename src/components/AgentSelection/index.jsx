@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import styles from "./AgentSelection.module.css";
 import { Contexto } from "../../Context";
 
 function AgentSelection() {
-  const { agentes, setAgentName, agentesRol, selectRol, setSelectRol, agentesByRol } = useContext(Contexto);
+  const { setAgentName, agentesRol, setSelectRol, agentesByRol, selectRol } = useContext(Contexto);
 
   const changeAgent = (agente) => {
     setAgentName(agente);
@@ -16,13 +16,15 @@ function AgentSelection() {
         <div className={styles.rolContainer}>
           {agentesRol &&
             agentesRol.map((roles) => (
-              <img
-                src={roles.icono}
-                alt={roles.rol}
-                key={roles.rol}
-                title={roles.rol}
-                onClick={(e) => setSelectRol(e.target.alt)}
-              />
+              <div className={styles.rolCaja} key={roles.rol}>
+                <img
+                  className={styles.rolImg}
+                  src={roles.icono}
+                  alt={roles.rol}
+                  title={roles.rol}
+                  onClick={(e) => setSelectRol(e.target.alt)}
+                />
+              </div>
             ))}
         </div>
       </>
@@ -32,6 +34,7 @@ function AgentSelection() {
   const displayAgentes = () => {
     return (
       <>
+        {selectRol !== "Todos" && selectRol && <h2 className={styles.nombreRol}>{selectRol}</h2>}
         <div className={styles.container}>
           {agentesByRol &&
             agentesByRol.map((agente, index) => (
