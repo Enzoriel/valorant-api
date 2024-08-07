@@ -1,14 +1,21 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "./Home.module.css";
 import { Contexto } from "../../Context";
 import AgentSelection from "../AgentSelection";
 
 function Home() {
-  const { setAgentName } = useContext(Contexto);
+  const { setAgentName, agentes, agentName } = useContext(Contexto);
+  const [mostrarError, setMostrarError] = useState(false);
   const inputRef = useRef();
 
   const cambiarAgente = (agente) => {
-    setAgentName(agente);
+    if (agentes.some((item) => item.nombre.toLowerCase() === agente)) {
+      setAgentName("");
+      setTimeout(() => setAgentName(agente), 0);
+      setMostrarError(false);
+    } else {
+      setMostrarError(true);
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -34,6 +41,9 @@ function Home() {
           </div>
           <input ref={inputRef} id="id" placeholder="Ej: Gekko" type="text" onKeyDown={handleKeyDown} />
         </div>
+        <p className={styles.errorName} hidden={!mostrarError}>
+          Agente no encontrado
+        </p>
       </section>
     </div>
   );

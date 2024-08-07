@@ -5,6 +5,7 @@
   width: 100%;
   height: 140px;
   background: linear-gradient(to right, transparent, #383838, transparent);
+  box-shadow: 0 0 10px #00000080;
 }
 
 .logo {
