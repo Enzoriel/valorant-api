@@ -38,8 +38,8 @@ function AgentSelection() {
   const displayAgentes = () => {
     return (
       <>
-        {selectRol !== "Todos" && selectRol && <h2 className={styles.nombreRol}>{selectRol}</h2>}
         <div className={styles.agentContainer}>
+          {selectRol !== "Todos" && selectRol && <h2 className={styles.nombreRol}>{selectRol}</h2>}
           <div className={styles.container}>
             {agentesByRol &&
               agentesByRol.map((agente, index) => (
