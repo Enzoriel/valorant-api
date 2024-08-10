@@ -11,7 +11,9 @@ function Header() {
           alt="Imagen del encabezado"
         />
       </Link>
-      <h1 className={styles.titulo}>Agentes de Valorant</h1>
+      <Link to="/" className={styles.titulo}>
+        Agentes de Valorant
+      </Link>
     </header>
   );
 }

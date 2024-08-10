@@ -7,7 +7,8 @@ function AgentSelection() {
   const [filterActive, setFilterActive] = useState("Todos");
 
   const changeAgent = (agente) => {
-    setAgentName(agente);
+    setAgentName("");
+    setTimeout(() => setAgentName(agente));
   };
 
   const crearRoles = () => {

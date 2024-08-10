@@ -9,11 +9,15 @@
 }
 
 .logo {
-  position: absolute;
-  left: 40px;
-  top: 20px;
-  width: 150px;
-  height: 100px;
+  width: 20vw;
+  max-width: 170px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.titulo {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
 }
